@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  kali:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: 'kali'
+    ports:
+      - "3389:3389/tcp"
+    restart: 'always'
+    environment:
+      Kali_Password: ${Kali_Password}
