@@ -20,3 +20,10 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+#IDE Specific
+.unotes
+
+#YouTrack Backups
+youtrack/backups/*.zip
+!youtrack/backups/init.zip

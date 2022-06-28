@@ -3,7 +3,7 @@ version: "3"
 services:
   kali:
     build:
-      context: .
+      context: ./kali
       dockerfile: ./Dockerfile
     container_name: 'kali'
     ports:
@@ -11,3 +11,11 @@ services:
     restart: 'always'
     environment:
       Kali_Password: ${Kali_Password}
+  youtrack:
+    image: jetbrains/youtrack:2022.1.46592
+    container_name: 'youtrack'
+    restart: always
+    ports:
+      - "8080:8080/tcp"
+    volumes:
+      - ./youtrack/backups:/opt/youtrack/backups
